@@ -20,7 +20,7 @@
 @import "bootstrap";
 /* Some Style from the Bootstrap Default Theme */
 body {
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 30px;
 }
 
@@ -32,4 +32,26 @@ body {
 
 .theme-showcase > p > .btn {
   margin: 5px 0;
+}
+
+#body_main { 
+  padding-top: 20px;
+  width: auto;
+}
+
+#user_info {
+  padding: 10px;
+  color: black;
+}
+
+#nav_head {
+  background-color: #00b3e6;
+}
+
+#nav-link > a {
+  color: #ddd;
+}
+
+#notice-flash {
+  padding-top: 60px;
 }

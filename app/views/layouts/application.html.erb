@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsFlatironStore</title>
+  <title>Rails Flatiron Store</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,17 @@
 <body>
 
 <%= render 'layouts/header' %>
-<%= yield %>
+
+<div class="container">
+  <div class="notice" id="notice-flash">
+  <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+  <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+  <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+  </div>
+  <div class="container" role="main" id="body_main">
+  <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>
